@@ -26,7 +26,7 @@ housing_price_prediction/
 ```bash
 pip install -r requirements.txt
 ```
-![](архитектура сервиса ПА.png)
+![](image.png)
 
 ### Данные
 Используемые данные включают следующие характеристики:
