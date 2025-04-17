@@ -26,6 +26,7 @@ housing_price_prediction/
 ```bash
 pip install -r requirements.txt
 ```
+![архитектура сервиса ПА](https://github.com/user-attachments/assets/30abaadf-ba8f-417c-a23c-06bf8baf12e6)
 
 ### Данные
 Используемые данные включают следующие характеристики:
