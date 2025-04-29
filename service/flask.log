@@ -879,3 +879,36 @@
 [2025-04-29 19:34:29,936] INFO in _internal:  * Restarting with watchdog (windowsapi)
 [2025-04-29 19:34:30,223] WARNING in _internal:  * Debugger is active!
 [2025-04-29 19:34:30,223] INFO in _internal:  * Debugger PIN: 131-854-612
+[2025-04-29 19:41:11,636] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2025-04-29 19:41:11,636] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-29 19:41:11,643] INFO in _internal:  * Restarting with watchdog (windowsapi)
+[2025-04-29 19:41:11,860] WARNING in _internal:  * Debugger is active!
+[2025-04-29 19:41:11,860] INFO in _internal:  * Debugger PIN: 131-854-612
+[2025-04-29 19:42:11,108] INFO in _internal:  * Detected change in 'D:\\Anaconda\\Lib\\datetime.py', reloading
+[2025-04-29 19:42:11,138] INFO in _internal:  * Detected change in 'D:\\Anaconda\\Lib\\_pydatetime.py', reloading
+[2025-04-29 19:42:11,988] INFO in _internal:  * Restarting with watchdog (windowsapi)
+[2025-04-29 19:42:12,235] WARNING in _internal:  * Debugger is active!
+[2025-04-29 19:42:12,235] INFO in _internal:  * Debugger PIN: 131-854-612
+[2025-04-29 20:20:43,395] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2025-04-29 20:20:43,395] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-04-29 20:20:43,415] INFO in _internal:  * Restarting with watchdog (windowsapi)
+[2025-04-29 20:20:43,641] WARNING in _internal:  * Debugger is active!
+[2025-04-29 20:20:43,641] INFO in _internal:  * Debugger PIN: 131-854-612
+[2025-04-29 20:20:53,517] INFO in _internal: 127.0.0.1 - - [29/Apr/2025 20:20:53] "GET / HTTP/1.1" 200 -
+[2025-04-29 20:20:53,631] INFO in _internal: 127.0.0.1 - - [29/Apr/2025 20:20:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-04-29 20:20:59,774] INFO in app: Requst data: {'area': '30', 'rooms': '', 'total_floors': '', 'floor': ''}
+[2025-04-29 20:20:59,775] INFO in _internal: 127.0.0.1 - - [29/Apr/2025 20:20:59] "POST /api/numbers HTTP/1.1" 200 -
+[2025-04-29 20:21:16,627] INFO in _internal:  * Detected change in 'D:\\Anaconda\\Lib\\site-packages\\flask\\typing.py', reloading
+[2025-04-29 20:21:16,641] INFO in _internal:  * Detected change in 'D:\\Anaconda\\Lib\\site-packages\\werkzeug\\sansio\\response.py', reloading
+[2025-04-29 20:21:16,659] INFO in _internal:  * Detected change in 'D:\\Anaconda\\Lib\\site-packages\\werkzeug\\datastructures\\__init__.py', reloading
+[2025-04-29 20:21:16,674] INFO in _internal:  * Detected change in 'D:\\Anaconda\\Lib\\site-packages\\werkzeug\\utils.py', reloading
+[2025-04-29 20:21:16,691] INFO in _internal:  * Detected change in 'D:\\Anaconda\\Lib\\site-packages\\flask\\config.py', reloading
+[2025-04-29 20:21:16,701] INFO in _internal:  * Detected change in 'D:\\Anaconda\\Lib\\site-packages\\flask\\globals.py', reloading
+[2025-04-29 20:21:16,701] INFO in _internal:  * Detected change in 'D:\\Anaconda\\Lib\\site-packages\\flask\\wrappers.py', reloading
+[2025-04-29 20:21:16,708] INFO in _internal:  * Detected change in 'D:\\Anaconda\\Lib\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+[2025-04-29 20:21:16,709] INFO in _internal:  * Detected change in 'D:\\Anaconda\\Lib\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+[2025-04-29 20:21:16,749] INFO in _internal:  * Restarting with watchdog (windowsapi)
+[2025-04-29 20:21:16,981] WARNING in _internal:  * Debugger is active!
+[2025-04-29 20:21:16,990] INFO in _internal:  * Debugger PIN: 131-854-612

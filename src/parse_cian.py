@@ -2,7 +2,6 @@
 https://github.com/lenarsaitov/cianparser
 """
 import datetime
-
 import cianparser
 import pandas as pd
 
