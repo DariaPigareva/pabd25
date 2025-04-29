@@ -875,3 +875,7 @@
 [2025-04-29 19:29:08,168] INFO in _internal:  * Restarting with watchdog (windowsapi)
 [2025-04-29 19:29:08,395] WARNING in _internal:  * Debugger is active!
 [2025-04-29 19:29:08,395] INFO in _internal:  * Debugger PIN: 131-854-612
+[2025-04-29 19:34:29,816] INFO in _internal:  * Detected change in 'D:\\Anaconda\\Lib\\logging\\__init__.py', reloading
+[2025-04-29 19:34:29,936] INFO in _internal:  * Restarting with watchdog (windowsapi)
+[2025-04-29 19:34:30,223] WARNING in _internal:  * Debugger is active!
+[2025-04-29 19:34:30,223] INFO in _internal:  * Debugger PIN: 131-854-612
