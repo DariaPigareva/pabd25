@@ -912,3 +912,88 @@
 [2025-04-29 20:21:16,749] INFO in _internal:  * Restarting with watchdog (windowsapi)
 [2025-04-29 20:21:16,981] WARNING in _internal:  * Debugger is active!
 [2025-04-29 20:21:16,990] INFO in _internal:  * Debugger PIN: 131-854-612
+[2025-05-12 19:32:20,376] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2025-05-12 19:32:20,376] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-12 19:32:20,376] INFO in _internal:  * Restarting with stat
+[2025-05-12 19:32:20,561] WARNING in _internal:  * Debugger is active!
+[2025-05-12 19:32:20,577] INFO in _internal:  * Debugger PIN: 711-195-382
+[2025-05-12 19:35:12,283] INFO in _internal: 127.0.0.1 - - [12/May/2025 19:35:12] "GET / HTTP/1.1" 200 -
+[2025-05-12 19:35:12,385] INFO in _internal: 127.0.0.1 - - [12/May/2025 19:35:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-05-12 19:35:16,816] INFO in app: Requst data: {'area': '', 'rooms': '1', 'total_floors': '', 'floor': ''}
+[2025-05-12 19:35:16,816] INFO in _internal: 127.0.0.1 - - [12/May/2025 19:35:16] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-12 19:35:21,567] INFO in app: Requst data: {'area': '', 'rooms': '1', 'total_floors': '2', 'floor': ''}
+[2025-05-12 19:35:21,568] INFO in _internal: 127.0.0.1 - - [12/May/2025 19:35:21] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-12 19:35:22,716] INFO in app: Requst data: {'area': '', 'rooms': '1', 'total_floors': '2', 'floor': ''}
+[2025-05-12 19:35:22,717] INFO in _internal: 127.0.0.1 - - [12/May/2025 19:35:22] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-12 20:37:07,734] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2025-05-12 20:37:07,734] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-12 20:37:07,736] INFO in _internal:  * Restarting with stat
+[2025-05-12 20:37:08,816] WARNING in _internal:  * Debugger is active!
+[2025-05-12 20:37:08,825] INFO in _internal:  * Debugger PIN: 711-195-382
+[2025-05-12 20:38:01,288] INFO in _internal: 127.0.0.1 - - [12/May/2025 20:38:01] "GET / HTTP/1.1" 200 -
+[2025-05-12 20:38:09,345] INFO in _internal: 127.0.0.1 - - [12/May/2025 20:38:09] "GET / HTTP/1.1" 200 -
+[2025-05-12 20:38:10,131] INFO in _internal: 127.0.0.1 - - [12/May/2025 20:38:10] "GET / HTTP/1.1" 200 -
+[2025-05-12 20:38:25,384] INFO in _internal: 127.0.0.1 - - [12/May/2025 20:38:25] "GET / HTTP/1.1" 200 -
+[2025-05-12 20:38:48,558] INFO in _internal: 127.0.0.1 - - [12/May/2025 20:38:48] "[31m[1mGET /api/predict HTTP/1.1[0m" 405 -
+[2025-05-12 20:39:15,406] INFO in _internal:  * Detected change in 'c:\\Users\\user\\Downloads\\Projects\\ssh\\pabd25\\service\\app.py', reloading
+[2025-05-12 20:39:15,593] INFO in _internal:  * Restarting with stat
+[2025-05-12 20:39:41,963] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2025-05-12 20:39:41,963] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-12 20:39:41,970] INFO in _internal:  * Restarting with stat
+[2025-05-12 20:39:43,068] WARNING in _internal:  * Debugger is active!
+[2025-05-12 20:39:43,068] INFO in _internal:  * Debugger PIN: 711-195-382
+[2025-05-12 20:39:47,872] INFO in _internal: 127.0.0.1 - - [12/May/2025 20:39:47] "GET / HTTP/1.1" 200 -
+[2025-05-12 20:41:32,602] INFO in _internal:  * Detected change in 'c:\\Users\\user\\Downloads\\Projects\\ssh\\pabd25\\service\\app.py', reloading
+[2025-05-12 20:41:32,768] INFO in _internal:  * Restarting with stat
+[2025-05-12 20:41:45,008] INFO in app: Используется модель: models/linear_regression_model.pkl
+[2025-05-12 20:41:45,027] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2025-05-12 20:41:45,029] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-12 20:41:45,031] INFO in _internal:  * Restarting with stat
+[2025-05-12 20:41:46,158] INFO in app: Используется модель: models/linear_regression_model.pkl
+[2025-05-12 20:41:46,172] WARNING in _internal:  * Debugger is active!
+[2025-05-12 20:41:46,192] INFO in _internal:  * Debugger PIN: 711-195-382
+[2025-05-12 20:41:52,532] INFO in _internal: 127.0.0.1 - - [12/May/2025 20:41:52] "GET / HTTP/1.1" 200 -
+[2025-05-12 20:41:56,102] INFO in app: Request data: {'area': '30', 'rooms': '', 'total_floors': '', 'floor': ''}
+[2025-05-12 20:41:56,102] INFO in _internal: 127.0.0.1 - - [12/May/2025 20:41:56] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-12 20:42:23,991] INFO in app: Request data: {'area': '', 'rooms': '2', 'total_floors': '', 'floor': ''}
+[2025-05-12 20:42:23,992] INFO in _internal: 127.0.0.1 - - [12/May/2025 20:42:23] "[31m[1mPOST /api/numbers HTTP/1.1[0m" 400 -
+[2025-05-12 20:42:32,267] INFO in app: Request data: {'area': '40', 'rooms': '', 'total_floors': '', 'floor': ''}
+[2025-05-12 20:42:32,268] INFO in _internal: 127.0.0.1 - - [12/May/2025 20:42:32] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-12 20:43:42,813] INFO in app: Request data: {'area': '25', 'rooms': '', 'total_floors': '', 'floor': ''}
+[2025-05-12 20:43:42,813] INFO in _internal: 127.0.0.1 - - [12/May/2025 20:43:42] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-12 20:43:44,846] INFO in app: Request data: {'area': '25', 'rooms': '', 'total_floors': '', 'floor': ''}
+[2025-05-12 20:43:44,847] INFO in _internal: 127.0.0.1 - - [12/May/2025 20:43:44] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-12 20:45:36,276] INFO in _internal:  * Detected change in 'c:\\Users\\user\\Downloads\\Projects\\ssh\\pabd25\\service\\app.py', reloading
+[2025-05-12 20:45:36,421] INFO in _internal:  * Restarting with stat
+[2025-05-12 20:45:37,551] INFO in app: Используется модель: models/linear_regression_model.pkl
+[2025-05-12 20:45:37,560] WARNING in _internal:  * Debugger is active!
+[2025-05-12 20:45:37,563] INFO in _internal:  * Debugger PIN: 711-195-382
+[2025-05-12 20:45:49,130] INFO in app: Request data: {'area': '25', 'rooms': '', 'total_floors': '', 'floor': ''}
+[2025-05-12 20:45:49,130] INFO in _internal: 127.0.0.1 - - [12/May/2025 20:45:49] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-12 20:45:50,319] INFO in app: Request data: {'area': '25', 'rooms': '', 'total_floors': '', 'floor': ''}
+[2025-05-12 20:45:50,319] INFO in _internal: 127.0.0.1 - - [12/May/2025 20:45:50] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-12 20:45:51,439] INFO in app: Request data: {'area': '25', 'rooms': '', 'total_floors': '', 'floor': ''}
+[2025-05-12 20:45:51,440] INFO in _internal: 127.0.0.1 - - [12/May/2025 20:45:51] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-12 20:46:14,740] INFO in _internal:  * Detected change in 'c:\\Users\\user\\Downloads\\Projects\\ssh\\pabd25\\service\\app.py', reloading
+[2025-05-12 20:46:14,891] INFO in _internal:  * Restarting with stat
+[2025-05-12 20:46:15,956] INFO in app: Используется модель: models/linear_regression_model.pkl
+[2025-05-12 20:46:15,966] WARNING in _internal:  * Debugger is active!
+[2025-05-12 20:46:15,966] INFO in _internal:  * Debugger PIN: 711-195-382
+[2025-05-12 20:46:22,809] INFO in app: Request data: {'area': '25', 'rooms': '', 'total_floors': '', 'floor': ''}
+[2025-05-12 20:46:22,812] INFO in _internal: 127.0.0.1 - - [12/May/2025 20:46:22] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-12 20:46:24,136] INFO in _internal: 127.0.0.1 - - [12/May/2025 20:46:24] "GET / HTTP/1.1" 200 -
+[2025-05-12 20:46:27,389] INFO in app: Request data: {'area': '30', 'rooms': '', 'total_floors': '', 'floor': ''}
+[2025-05-12 20:46:27,391] INFO in _internal: 127.0.0.1 - - [12/May/2025 20:46:27] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-12 20:46:40,887] INFO in app: Request data: {'area': '30', 'rooms': '', 'total_floors': '', 'floor': ''}
+[2025-05-12 20:46:40,887] INFO in _internal: 127.0.0.1 - - [12/May/2025 20:46:40] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-12 20:46:41,587] INFO in app: Request data: {'area': '30', 'rooms': '', 'total_floors': '', 'floor': ''}
+[2025-05-12 20:46:41,587] INFO in _internal: 127.0.0.1 - - [12/May/2025 20:46:41] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-12 20:46:42,713] INFO in _internal: 127.0.0.1 - - [12/May/2025 20:46:42] "GET / HTTP/1.1" 200 -
+[2025-05-12 20:46:46,444] INFO in app: Request data: {'area': '20', 'rooms': '', 'total_floors': '', 'floor': ''}
+[2025-05-12 20:46:46,445] INFO in _internal: 127.0.0.1 - - [12/May/2025 20:46:46] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-12 20:48:52,717] INFO in _internal:  * Detected change in 'c:\\Users\\user\\Downloads\\Projects\\ssh\\pabd25\\service\\app.py', reloading
+[2025-05-12 20:48:52,875] INFO in _internal:  * Restarting with stat
