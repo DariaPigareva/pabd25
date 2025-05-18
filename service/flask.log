@@ -1000,3 +1000,110 @@
 [2025-05-12 20:48:53,941] INFO in app: Используется модель: models/linear_regression_model.pkl
 [2025-05-12 20:48:53,947] WARNING in _internal:  * Debugger is active!
 [2025-05-12 20:48:53,949] INFO in _internal:  * Debugger PIN: 711-195-382
+[2025-05-18 23:26:15,963] INFO in app: Use model: models/linear_regression_model.pkl
+[2025-05-18 23:26:16,032] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2025-05-18 23:26:16,032] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-18 23:26:16,034] INFO in _internal:  * Restarting with stat
+[2025-05-18 23:26:18,398] INFO in app: Use model: models/linear_regression_model.pkl
+[2025-05-18 23:26:18,408] WARNING in _internal:  * Debugger is active!
+[2025-05-18 23:26:18,413] INFO in _internal:  * Debugger PIN: 179-547-808
+[2025-05-18 23:26:20,172] INFO in _internal: 127.0.0.1 - - [18/May/2025 23:26:20] "GET / HTTP/1.1" 200 -
+[2025-05-18 23:26:20,302] INFO in _internal: 127.0.0.1 - - [18/May/2025 23:26:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-05-18 23:26:23,639] INFO in app: Requst data: {'area': '20', 'rooms': '', 'total_floors': '', 'floor': ''}
+[2025-05-18 23:26:23,640] INFO in _internal: 127.0.0.1 - - [18/May/2025 23:26:23] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-18 23:27:39,400] INFO in app: Use model: models/linear_regression_model.pkl
+[2025-05-18 23:27:39,435] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2025-05-18 23:27:39,436] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-18 23:27:39,439] INFO in _internal:  * Restarting with stat
+[2025-05-18 23:27:41,913] INFO in app: Use model: models/linear_regression_model.pkl
+[2025-05-18 23:27:41,928] WARNING in _internal:  * Debugger is active!
+[2025-05-18 23:27:41,932] INFO in _internal:  * Debugger PIN: 179-547-808
+[2025-05-18 23:27:42,091] INFO in _internal: 127.0.0.1 - - [18/May/2025 23:27:42] "GET / HTTP/1.1" 200 -
+[2025-05-18 23:27:45,174] INFO in app: Requst data: {'area': '15', 'rooms': '', 'total_floors': '', 'floor': ''}
+[2025-05-18 23:27:45,176] INFO in _internal: 127.0.0.1 - - [18/May/2025 23:27:45] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-18 23:32:06,034] INFO in _internal:  * Detected change in 'c:\\Users\\user\\Downloads\\Projects\\pabd25\\service\\app.py', reloading
+[2025-05-18 23:32:06,387] INFO in _internal:  * Restarting with stat
+[2025-05-18 23:44:25,325] INFO in app: Use model: models/linear_regression_model.pkl
+[2025-05-18 23:44:25,354] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2025-05-18 23:44:25,355] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-18 23:44:25,357] INFO in _internal:  * Restarting with stat
+[2025-05-18 23:44:27,355] INFO in app: Use model: models/linear_regression_model.pkl
+[2025-05-18 23:44:27,364] WARNING in _internal:  * Debugger is active!
+[2025-05-18 23:44:27,366] INFO in _internal:  * Debugger PIN: 179-547-808
+[2025-05-18 23:44:29,529] INFO in _internal: 127.0.0.1 - - [18/May/2025 23:44:29] "GET / HTTP/1.1" 200 -
+[2025-05-18 23:44:32,192] INFO in app: Requst data: {'area': '10', 'rooms': '', 'total_floors': '', 'floor': ''}
+[2025-05-18 23:44:32,213] INFO in _internal: 127.0.0.1 - - [18/May/2025 23:44:32] "[35m[1mPOST /api/numbers HTTP/1.1[0m" 500 -
+[2025-05-18 23:44:50,338] INFO in app: Requst data: {'area': '40', 'rooms': '3', 'total_floors': '12', 'floor': '1'}
+[2025-05-18 23:44:50,371] INFO in _internal: 127.0.0.1 - - [18/May/2025 23:44:50] "[35m[1mPOST /api/numbers HTTP/1.1[0m" 500 -
+[2025-05-18 23:44:51,318] INFO in app: Requst data: {'area': '40', 'rooms': '3', 'total_floors': '12', 'floor': '1'}
+[2025-05-18 23:44:51,327] INFO in _internal: 127.0.0.1 - - [18/May/2025 23:44:51] "[35m[1mPOST /api/numbers HTTP/1.1[0m" 500 -
+[2025-05-18 23:44:52,906] INFO in _internal: 127.0.0.1 - - [18/May/2025 23:44:52] "GET / HTTP/1.1" 200 -
+[2025-05-18 23:45:03,630] INFO in app: Requst data: {'area': '45', 'rooms': '2', 'total_floors': '10', 'floor': '1'}
+[2025-05-18 23:45:03,645] INFO in _internal: 127.0.0.1 - - [18/May/2025 23:45:03] "[35m[1mPOST /api/numbers HTTP/1.1[0m" 500 -
+[2025-05-18 23:46:43,619] INFO in _internal:  * Detected change in 'c:\\Users\\user\\Downloads\\Projects\\pabd25\\service\\app.py', reloading
+[2025-05-18 23:46:44,008] INFO in _internal:  * Restarting with stat
+[2025-05-18 23:46:46,391] INFO in app: Use model: models/linear_regression_model.pkl
+[2025-05-18 23:46:46,403] WARNING in _internal:  * Debugger is active!
+[2025-05-18 23:46:46,408] INFO in _internal:  * Debugger PIN: 179-547-808
+[2025-05-18 23:52:20,752] INFO in _internal:  * Detected change in 'c:\\Users\\user\\Downloads\\Projects\\pabd25\\service\\app.py', reloading
+[2025-05-18 23:52:21,145] INFO in _internal:  * Restarting with stat
+[2025-05-18 23:52:23,452] INFO in app: Use model: models/linear_regression_model.pkl
+[2025-05-18 23:52:23,462] WARNING in _internal:  * Debugger is active!
+[2025-05-18 23:52:23,465] INFO in _internal:  * Debugger PIN: 179-547-808
+[2025-05-19 00:04:58,716] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.71:5000
+[2025-05-19 00:04:58,717] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-19 00:05:03,898] INFO in _internal: 127.0.0.1 - - [19/May/2025 00:05:03] "GET / HTTP/1.1" 200 -
+[2025-05-19 00:05:13,681] ERROR in app: Error: X has 7 features, but LinearRegression is expecting 6 features as input.
+[2025-05-19 00:05:13,685] INFO in _internal: 127.0.0.1 - - [19/May/2025 00:05:13] "[31m[1mPOST /api/numbers HTTP/1.1[0m" 400 -
+[2025-05-19 00:08:01,220] INFO in app: Model loaded: c:\Users\user\Downloads\Projects\pabd25\service\..\models\linear_regression_model.pkl
+[2025-05-19 00:08:01,220] INFO in app: Scaler loaded: c:\Users\user\Downloads\Projects\pabd25\service\..\models\scaler.pkl
+[2025-05-19 00:08:01,240] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.71:5000
+[2025-05-19 00:08:01,240] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-19 00:08:05,022] INFO in _internal: 127.0.0.1 - - [19/May/2025 00:08:05] "GET / HTTP/1.1" 200 -
+[2025-05-19 00:08:13,858] INFO in _internal: 127.0.0.1 - - [19/May/2025 00:08:13] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-19 00:08:49,625] INFO in _internal: 127.0.0.1 - - [19/May/2025 00:08:49] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-19 00:08:54,098] INFO in _internal: 127.0.0.1 - - [19/May/2025 00:08:54] "GET / HTTP/1.1" 200 -
+[2025-05-19 00:09:00,886] INFO in _internal: 127.0.0.1 - - [19/May/2025 00:09:00] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-19 00:11:03,686] INFO in app: Model loaded: c:\Users\user\Downloads\Projects\pabd25\service\..\models\linear_regression_model.pkl
+[2025-05-19 00:11:03,687] INFO in app: Scaler loaded: c:\Users\user\Downloads\Projects\pabd25\service\..\models\scaler.pkl
+[2025-05-19 00:11:03,707] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.71:5000
+[2025-05-19 00:11:03,708] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-19 00:11:06,239] INFO in _internal: 127.0.0.1 - - [19/May/2025 00:11:06] "GET / HTTP/1.1" 200 -
+[2025-05-19 00:11:15,357] INFO in _internal: 127.0.0.1 - - [19/May/2025 00:11:15] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-19 00:11:32,965] INFO in _internal: 127.0.0.1 - - [19/May/2025 00:11:32] "GET / HTTP/1.1" 200 -
+[2025-05-19 00:11:42,235] INFO in _internal: 127.0.0.1 - - [19/May/2025 00:11:42] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-19 00:11:51,636] INFO in _internal: 127.0.0.1 - - [19/May/2025 00:11:51] "GET / HTTP/1.1" 200 -
+[2025-05-19 00:12:26,696] INFO in _internal: 127.0.0.1 - - [19/May/2025 00:12:26] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-19 00:23:06,844] INFO in app: Model loaded: c:\Users\user\Downloads\Projects\pabd25\service\..\models\linear_regression_model.pkl
+[2025-05-19 00:23:06,845] INFO in app: Scaler loaded: c:\Users\user\Downloads\Projects\pabd25\service\..\models\scaler.pkl
+[2025-05-19 00:23:06,868] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.71:5000
+[2025-05-19 00:23:06,868] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-19 00:23:09,059] INFO in _internal: 127.0.0.1 - - [19/May/2025 00:23:09] "GET / HTTP/1.1" 200 -
+[2025-05-19 00:23:16,662] INFO in _internal: 127.0.0.1 - - [19/May/2025 00:23:16] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-19 00:23:34,863] INFO in _internal: 127.0.0.1 - - [19/May/2025 00:23:34] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-19 00:23:40,843] INFO in _internal: 127.0.0.1 - - [19/May/2025 00:23:40] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-19 00:27:28,407] INFO in app: Model loaded: c:\Users\user\Downloads\Projects\pabd25\service\..\models\linear_regression_model.pkl
+[2025-05-19 00:27:28,408] INFO in app: Scaler loaded: c:\Users\user\Downloads\Projects\pabd25\service\..\models\scaler.pkl
+[2025-05-19 00:27:28,430] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.71:5000
+[2025-05-19 00:27:28,431] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-19 00:27:31,192] INFO in _internal: 127.0.0.1 - - [19/May/2025 00:27:31] "GET / HTTP/1.1" 200 -
+[2025-05-19 00:27:41,783] ERROR in app: Error: X has 6 features, but LinearRegression is expecting 7 features as input.
+[2025-05-19 00:27:41,785] INFO in _internal: 127.0.0.1 - - [19/May/2025 00:27:41] "[31m[1mPOST /api/numbers HTTP/1.1[0m" 400 -

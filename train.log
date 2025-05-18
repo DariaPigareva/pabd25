@@ -1,0 +1,69 @@
+2025-05-18 23:27:06,126 root INFO Preprocess_data. Use files to train: ['./data/raw\\1_2025-05-18_23-24.csv']
+2025-05-18 23:27:06,137 root INFO Preprocess_data. train_df: 44 samples
+2025-05-18 23:27:06,145 root INFO 
+           total_meters  floors_count     price  rooms_1  rooms_2  rooms_3  first_floor  last_floor
+url_id                                                                                             
+303370489          44.9             3   5700000     True    False    False        False        True
+307275502          41.0            12  11500000     True    False    False        False       False
+308100205          21.0            24  15590000     True    False    False        False        True
+308550093          31.9            23  17490000     True    False    False        False       False
+309525051          40.2            40  32500000     True    False    False        False       False
+2025-05-18 23:27:06,171 root INFO Preprocess_data. test_df: 12 samples
+2025-05-18 23:27:06,181 root INFO 
+           total_meters  floors_count     price  rooms_1  rooms_2  rooms_3  first_floor  last_floor
+url_id                                                                                             
+317217419          38.7            25  13350000     True    False    False        False       False
+317295694          34.4             3   6990000     True    False    False        False        True
+317331040          43.0            41  31900000     True    False    False        False       False
+317402829          35.0            12  11900000     True    False    False        False       False
+317421328          35.0             9  18250000     True    False    False        False       False
+2025-05-18 23:27:06,194 root INFO Train model. Total meters coef: 982462.56
+2025-05-18 23:27:06,194 root INFO Other coefs: [ 2.86288975e+05  5.31144906e-10  0.00000000e+00  0.00000000e+00
+ -7.43204807e+04 -3.65120233e+06]
+2025-05-18 23:27:06,195 root INFO Train model. Bias: -22607823.82
+2025-05-18 23:27:06,208 root INFO Test model. MSE: 20483708386385.12
+2025-05-18 23:27:06,208 root INFO Test model. RMSE: 4525893.10
+2025-05-18 23:27:06,208 root INFO Test model. MAE: 3169117.27
+2025-05-18 23:27:06,208 root INFO Test model. R2 train: 0.67
+2025-05-18 23:27:06,208 root INFO Test model. R2 test: 0.55
+2025-05-18 23:27:20,693 root INFO Preprocess_data. Use files to train: ['./data/raw\\1_2025-05-18_23-24.csv']
+2025-05-18 23:27:20,703 root INFO Preprocess_data. train_df: 44 samples
+2025-05-18 23:27:20,711 root INFO 
+           total_meters  floors_count     price  rooms_1  rooms_2  rooms_3  first_floor  last_floor
+url_id                                                                                             
+303370489          44.9             3   5700000     True    False    False        False        True
+307275502          41.0            12  11500000     True    False    False        False       False
+308100205          21.0            24  15590000     True    False    False        False        True
+308550093          31.9            23  17490000     True    False    False        False       False
+309525051          40.2            40  32500000     True    False    False        False       False
+2025-05-18 23:27:20,711 root INFO Preprocess_data. test_df: 12 samples
+2025-05-18 23:27:20,717 root INFO 
+           total_meters  floors_count     price  rooms_1  rooms_2  rooms_3  first_floor  last_floor
+url_id                                                                                             
+317217419          38.7            25  13350000     True    False    False        False       False
+317295694          34.4             3   6990000     True    False    False        False        True
+317331040          43.0            41  31900000     True    False    False        False       False
+317402829          35.0            12  11900000     True    False    False        False       False
+317421328          35.0             9  18250000     True    False    False        False       False
+2025-05-18 23:27:20,726 root INFO Train model. Total meters coef: 982462.56
+2025-05-18 23:27:20,726 root INFO Other coefs: [ 2.86288975e+05  5.31144906e-10  0.00000000e+00  0.00000000e+00
+ -7.43204807e+04 -3.65120233e+06]
+2025-05-18 23:27:20,726 root INFO Train model. Bias: -22607823.82
+2025-05-18 23:27:20,734 root INFO Test model. MSE: 20483708386385.12
+2025-05-18 23:27:20,734 root INFO Test model. RMSE: 4525893.10
+2025-05-18 23:27:20,734 root INFO Test model. MAE: 3169117.27
+2025-05-18 23:27:20,734 root INFO Test model. R2 train: 0.67
+2025-05-18 23:27:20,735 root INFO Test model. R2 test: 0.55
+2025-05-19 00:15:18,373 root INFO Train samples: 59, Test samples: 15
+2025-05-19 00:15:18,383 root INFO Model trained. Coefficients: [ 8.59137884e+05  3.23250777e+05 -6.92671165e-09  0.00000000e+00
+  0.00000000e+00 -4.25858591e+05 -2.69384231e+06]
+2025-05-19 00:15:18,387 root INFO MSE: 15712135282130.51, RMSE: 3963853.59, R2: 0.60
+2025-05-19 00:26:58,362 root INFO Данные предобработаны и сохранены.
+2025-05-19 00:26:58,369 root INFO Модель обучена и сохранена в models\linear_regression_model.pkl
+2025-05-19 00:26:58,369 root INFO Коэффициенты: [ 8.60922709e+05  3.26143599e+05 -2.03726813e-10  0.00000000e+00
+  0.00000000e+00 -3.03630525e+05 -2.57720682e+06]
+2025-05-19 00:28:14,640 root INFO Данные предобработаны и сохранены.
+2025-05-19 00:28:14,644 root INFO Модель обучена и сохранена в models\linear_regression_model.pkl
+2025-05-19 00:28:14,645 root INFO Коэффициенты: [ 8.60922709e+05  3.26143599e+05 -2.03726813e-10  0.00000000e+00
+  0.00000000e+00 -3.03630525e+05 -2.57720682e+06]
+2025-05-19 00:28:14,647 root INFO Test MSE: 15789488101383.05, RMSE: 3973598.89, R2: 0.62

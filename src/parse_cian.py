@@ -12,6 +12,7 @@ def main():
     """
     Function docstring
     """
+    # Форматируем в строку
     t = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M")
     n_rooms = 1
     csv_path = f'data/raw/{n_rooms}_{t}.csv'
