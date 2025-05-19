@@ -1107,3 +1107,36 @@
 [2025-05-19 00:27:31,192] INFO in _internal: 127.0.0.1 - - [19/May/2025 00:27:31] "GET / HTTP/1.1" 200 -
 [2025-05-19 00:27:41,783] ERROR in app: Error: X has 6 features, but LinearRegression is expecting 7 features as input.
 [2025-05-19 00:27:41,785] INFO in _internal: 127.0.0.1 - - [19/May/2025 00:27:41] "[31m[1mPOST /api/numbers HTTP/1.1[0m" 400 -
+[2025-05-19 00:29:08,929] INFO in app: Model loaded: c:\Users\user\Downloads\Projects\pabd25\service\..\models\linear_regression_model.pkl
+[2025-05-19 00:29:08,929] INFO in app: Scaler loaded: c:\Users\user\Downloads\Projects\pabd25\service\..\models\scaler.pkl
+[2025-05-19 00:29:08,944] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.71:5000
+[2025-05-19 00:29:08,945] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-19 00:29:10,996] INFO in _internal: 127.0.0.1 - - [19/May/2025 00:29:10] "GET / HTTP/1.1" 200 -
+[2025-05-19 00:29:20,404] INFO in _internal: 127.0.0.1 - - [19/May/2025 00:29:20] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-19 18:17:33,634] INFO in app: Model loaded: c:\Users\user\Downloads\Projects\pabd25\service\..\models\linear_regression_model.pkl
+[2025-05-19 18:17:33,635] INFO in app: Scaler loaded: c:\Users\user\Downloads\Projects\pabd25\service\..\models\scaler.pkl
+[2025-05-19 18:17:33,662] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.71:5000
+[2025-05-19 18:17:33,662] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-19 18:17:38,014] INFO in _internal: 127.0.0.1 - - [19/May/2025 18:17:38] "GET / HTTP/1.1" 200 -
+[2025-05-19 18:17:38,158] INFO in _internal: 127.0.0.1 - - [19/May/2025 18:17:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-05-19 18:17:41,423] ERROR in app: Error: invalid literal for int() with base 10: ''
+[2025-05-19 18:17:41,424] INFO in _internal: 127.0.0.1 - - [19/May/2025 18:17:41] "[31m[1mPOST /api/numbers HTTP/1.1[0m" 400 -
+[2025-05-19 18:17:52,562] INFO in _internal: 127.0.0.1 - - [19/May/2025 18:17:52] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-19 19:13:57,320] INFO in app: Model loaded: c:\Users\user\Downloads\Projects\pabd25\service\..\models\linear_regression_model.pkl
+[2025-05-19 19:13:57,321] INFO in app: Scaler loaded: c:\Users\user\Downloads\Projects\pabd25\service\..\models\scaler.pkl
+[2025-05-19 19:13:57,338] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.4.200.146:5000
+[2025-05-19 19:13:57,338] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-19 19:14:00,252] INFO in _internal: 127.0.0.1 - - [19/May/2025 19:14:00] "GET / HTTP/1.1" 200 -
+[2025-05-19 19:14:00,414] INFO in _internal: 127.0.0.1 - - [19/May/2025 19:14:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-05-19 19:14:07,524] INFO in _internal: 127.0.0.1 - - [19/May/2025 19:14:07] "POST /api/numbers HTTP/1.1" 200 -
+[2025-05-19 19:15:31,745] INFO in _internal: 127.0.0.1 - - [19/May/2025 19:15:31] "GET / HTTP/1.1" 200 -
+[2025-05-19 19:15:43,825] INFO in _internal: 127.0.0.1 - - [19/May/2025 19:15:43] "POST /api/numbers HTTP/1.1" 200 -
