@@ -1,0 +1,16 @@
+stages:
+  train:
+    cmd: python src/train.py
+    deps:
+    - data/processed
+    - src/train.py
+    outs:
+    - models/
+  test:
+    cmd: python src/test.py
+    deps:
+    - models/
+    - src/test.py
+    metrics:
+    - metrics.json:
+        cache: false
