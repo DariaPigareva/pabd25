@@ -1,179 +1,178 @@
 """
-Модуль для полного цикла ML-модели линейной регрессии.
-
-Особенности:
-- Парсинг данных с CIAN
-- Предобработка данных с переименованием столбцов
-- Обучение модели с настройкой через аргументы
-- Тестирование на новых данных с сортировкой по url_id
+This is full life cycle for ml model.
+DecisionTreeRegressor with 5 features:
+- total_meters
+- floors_count
+- first_floor
+- last_floor
+- n_rooms (One Hot Encoded)
 """
 
 import argparse
 import datetime
 import glob
 import os
-import numpy as np
 import logging
-import cianparser
 import joblib
+import numpy as np
 import pandas as pd
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error
 
-DEFAULT_TEST_SIZE = 0.2
-DEFAULT_N_ROOMS = 1
-DEFAULT_MODEL_NAME = "linear_regression_model.pkl"
 
+
+TEST_SIZE = 0.2
+N_ROOMS = 1
+MODEL_NAME = "decision_tree_reg_1.pkl"
+
+# Настройка логирования в консоль + файл
 logging.basicConfig(
-    filename="train.log",
-    filemode="a",
-    format="%(asctime)s,%(msecs)03d %(name)s %(levelname)s %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S",
-    level=logging.DEBUG,
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[
+        logging.FileHandler("train.log"),
+        logging.StreamHandler()
+    ]
 )
 
-
-def parse_cian(n_rooms: int = 1) -> None:
-    """
-    Парсинг данных с CIAN и сохранение в папку data/raw.
-
-    Args:
-        n_rooms (int): Количество комнат для парсинга (по умолчанию 1)
-    """
-    moscow_parser = cianparser.CianParser(location="Москва")
-    os.makedirs("data/raw", exist_ok=True)
-
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M")
-    csv_path = f"data/raw/{n_rooms}_{timestamp}.csv"
-
-    data = moscow_parser.get_flats(
-        deal_type="sale",
-        rooms=(n_rooms,),
-        with_saving_csv=False,
-        additional_settings={
-            "start_page": 1,
-            "end_page": 2,
-            "object_type": "secondary",
-        },
-    )
-
-    df = pd.DataFrame(data).rename(columns={
-        'total_meters': 'area',
-        'floors_count': 'total_floors',
-        'rooms_count': 'rooms'
-    })
-
-    df.to_csv(csv_path, encoding="utf-8", index=False)
-    logging.info("Данные успешно спарсены и сохранены в %s", csv_path)
-
-
-def preprocess_data(test_size: float) -> None:
-    """
-    Предобработка данных и подготовка к обучению модели.
-
-    Args:
-        test_size (float): Доля тестовой выборки (от 0.0 до 1.0)
-    """
-    raw_files = glob.glob("data/raw/*.csv")
-    if not raw_files:
-        raise FileNotFoundError("Нет сырых данных для обработки")
-
-    # Загрузка и объединение данных
-    df = pd.concat(
-        [pd.read_csv(f).rename(columns={
-            'total_meters': 'area',
-            'floors_count': 'total_floors',
-            'rooms_count': 'rooms'
-        }) for f in raw_files],
-        ignore_index=True
-    )
-
-    # Сортировка по url_id для выделения новых данных в тест
-    df["url_id"] = df["url"].map(lambda x: x.split("/")[-2])
-    df.sort_values("url_id", inplace=True)
-
-    # Фильтрация и признаки
-    df = df[
-        (df["price"] < 100_000_000) &
-        (df["area"] < 100)
-    ].drop_duplicates().copy()
-
-    df["rooms_1"] = df["rooms"] == 1
-    df["rooms_2"] = df["rooms"] == 2
-    df["rooms_3"] = df["rooms"] == 3
-    df["first_floor"] = df["floor"] == 1
-    df["last_floor"] = df["floor"] == df["total_floors"]
-
-    # Разделение данных с сохранением порядка (по url_id)
-    test_size_abs = int(len(df) * test_size)
-    train_df = df.iloc[:-test_size_abs] if test_size_abs > 0 else df
-    test_df = df.iloc[-test_size_abs:] if test_size_abs > 0 else df.iloc[0:0]
-
-    os.makedirs("data/processed", exist_ok=True)
-    train_df.to_csv("data/processed/train.csv", index=False)
-    test_df.to_csv("data/processed/test.csv", index=False)
-    logging.info("Данные предобработаны и сохранены.")
+def parse_cian(n_rooms=1):
+    """Парсинг данных с CIAN"""
+    try:
+        import cianparser
+        moscow_parser = cianparser.CianParser(location="Москва")
+        t = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M")
+        os.makedirs("data/raw", exist_ok=True)
+        csv_path = f"data/raw/{n_rooms}_{t}.csv"
+        
+        logging.info("Запуск парсинга новых данных...")
+        
+        data = moscow_parser.get_flats(
+            deal_type="sale",
+            rooms=(n_rooms,),
+            with_saving_csv=False,
+            additional_settings={
+                "start_page": 1,
+                "end_page": 5,
+                "object_type": "secondary",
+                "delay": 2.0,  # Увеличьте задержку
+            },
+        )
+        
+        if not data:
+            logging.error("Парсер вернул пустой результат!")
+            return
+            
+        df = pd.DataFrame(data)
+        if df.empty:
+            logging.error("Нет данных для сохранения!")
+            return
+            
+        df.to_csv(csv_path, index=False)
+        logging.info(f"Сохранено {len(df)} записей в {csv_path}")
+        
+    except Exception as e:
+        logging.error(f"Ошибка: {str(e)}", exc_info=True)  # Добавлен traceback
+        raise
 
 
-def train_model(model_path: str) -> None:
-    """
-    Обучение модели линейной регрессии и сохранение.
+def preprocess_data(test_size):
+    """Обработка данных"""
+    try:
+        raw_data_path = "data/raw"
+        file_list = glob.glob(os.path.join(raw_data_path, "*.csv"))
+        
+        if not file_list:
+            raise FileNotFoundError("Нет CSV-файлов для обработки в data/raw")
+        
+        logging.info(f"Обработка {len(file_list)} файлов...")
+        df = pd.concat([pd.read_csv(f) for f in file_list], ignore_index=True)
 
-    Args:
-        model_path (str): Путь для сохранения модели
-    """
-    train_df = pd.read_csv("data/processed/train.csv")
-    X = train_df[["area", "total_floors", "rooms_1", "rooms_2", "rooms_3", "first_floor", "last_floor"]]
-    y = train_df["price"]
+        # Обработка данных
+        df["url_id"] = df["url"].map(lambda x: x.split("/")[-2])
+        df = df[
+            ["url_id", "total_meters", "floor", "floors_count", "rooms_count", "price"]
+        ].set_index("url_id")
+        
+        # Фильтрация
+        df = df[
+            (df["price"] < 100_000_000) & 
+            (df["total_meters"] < 100)
+        ].drop_duplicates()
+        
+        # Feature engineering
+        df["rooms_1"] = (df["rooms_count"] == 1).astype(int)
+        df["rooms_2"] = (df["rooms_count"] == 2).astype(int)
+        df["rooms_3"] = (df["rooms_count"] == 3).astype(int)
+        df["first_floor"] = (df["floor"] == 1).astype(int)
+        df["last_floor"] = (df["floor"] == df["floors_count"]).astype(int)
+        df = df.drop(columns=["floor", "rooms_count"])
+        
+        # Разделение данных
+        train_df, test_df = train_test_split(df, test_size=test_size, random_state=42)
+        
+        # Сохранение
+        os.makedirs("data/processed", exist_ok=True)
+        train_df.to_csv("data/processed/train.csv")
+        test_df.to_csv("data/processed/test.csv")
+        logging.info("Данные успешно обработаны и сохранены")
+        
+    except Exception as e:
+        logging.error(f"Ошибка обработки данных: {str(e)}")
+        raise
 
-    model = LinearRegression()
-    model.fit(X, y)
+def train_model(model_path):
+    """Обучение модели"""
+    try:
+        train_df = pd.read_csv("data/processed/train.csv")
+        X = train_df.drop(columns=["price"])
+        y = train_df["price"]
+        
+        model = DecisionTreeRegressor(max_depth=5)
+        model.fit(X, y)
+        
+        os.makedirs(os.path.dirname(model_path), exist_ok=True)
+        joblib.dump(model, model_path)
+        logging.info(f"Модель сохранена в {model_path}")
+        
+    except Exception as e:
+        logging.error(f"Ошибка обучения: {str(e)}")
+        raise
 
-    joblib.dump(model, model_path)
-    logging.info("Модель обучена и сохранена в %s", model_path)
-    logging.info(f"Коэффициенты: {model.coef_}")
-
-
-def test_model(model_path: str) -> None:
-    """
-    Тестирование модели на новых данных.
-
-    Args:
-        model_path (str): Путь к файлу модели
-    """
-    test_df = pd.read_csv("data/processed/test.csv")
-    if test_df.empty:
-        logging.warning("Тестовая выборка пуста!")
-        return
-
-    X_test = test_df[["area", "total_floors", "rooms_1", "rooms_2", "rooms_3", "first_floor", "last_floor"]]
-    y_test = test_df["price"]
-
-    model = joblib.load(model_path)
-    y_pred = model.predict(X_test)
-
-    mse = mean_squared_error(y_test, y_pred)
-    rmse = np.sqrt(mse)
-    r2 = r2_score(y_test, y_pred)
-
-    logging.info(f"Test MSE: {mse:.2f}, RMSE: {rmse:.2f}, R2: {r2:.2f}")
-    print(f"Test MSE: {mse:.2f}, RMSE: {rmse:.2f}, R2: {r2:.2f}")
-
+def test_model(model_path):
+    """Тестирование модели"""
+    try:
+        test_df = pd.read_csv("data/processed/test.csv")
+        X_test = test_df.drop(columns=["price"])
+        y_test = test_df["price"]
+        
+        model = joblib.load(model_path)
+        y_pred = model.predict(X_test)
+        
+        # Метрики
+        mse = mean_squared_error(y_test, y_pred)
+        logging.info("\nРезультаты тестирования:")
+        logging.info(f"MSE: {mse:.2f}")
+        logging.info(f"RMSE: {np.sqrt(mse):.2f}")
+        logging.info(f"MAE: {np.mean(np.abs(y_test - y_pred)):.2f}")
+        logging.info(f"R2: {model.score(X_test, y_test):.2f}")
+        
+    except Exception as e:
+        logging.error(f"Ошибка тестирования: {str(e)}")
+        raise
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="ML pipeline for CIAN flats price prediction")
-    parser.add_argument("-s", "--split", type=float, default=DEFAULT_TEST_SIZE, help="Доля тестовой выборки (0.0 - 0.5)")
-    parser.add_argument("-n", "--n_rooms", type=int, default=DEFAULT_N_ROOMS, help="Количество комнат для парсинга")
-    parser.add_argument("-m", "--model", default=DEFAULT_MODEL_NAME, help="Имя файла для сохранения модели")
-    parser.add_argument("-p", "--parse_data", action="store_true", help="Парсить новые данные")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-p", "--parse", help="Спарсить новые данные", action="store_true")
+    parser.add_argument("-s", "--split", type=float, default=TEST_SIZE, help="Размер тестовой выборки")
+    parser.add_argument("-m", "--model", default=MODEL_NAME, help="Имя модели")
     args = parser.parse_args()
-
-    model_path = os.path.join("models", args.model)
-    os.makedirs("models", exist_ok=True)
-
-    if args.parse_data:
-        parse_cian(args.n_rooms)
-
-    preprocess_data(args.split)
-    train_model(model_path)
-    test_model(model_path)
+    
+    try:
+        parse_cian(N_ROOMS)  # ВСЕГДА парсить новые данные!
+        preprocess_data(args.split)
+        train_model(os.path.join("models", args.model))
+        test_model(os.path.join("models", args.model))
+    except Exception as e:
+        logging.error(f"Критическая ошибка: {str(e)}")
+        exit(1)
