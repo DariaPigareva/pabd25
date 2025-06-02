@@ -1,4 +1,9 @@
 [core]
-    remote = local_storage
-['remote "local_storage"']
-    url = ../dvc_storage
+    remote = storage
+[remote "storage"]
+    url = s3://pabd25/DariaPigareva
+    endpointurl = https://storage.yandexcloud.net
+
+
+
+
