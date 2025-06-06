@@ -56,11 +56,8 @@ jupyter notebook
 ```
 
 ### Модели машинного обучения
-* **Linear Regression** - базовая линейная регрессия
 * **Random Forest** - ансамбль деревьев решений
-* **Gradient Boosting** - градиентный бустинг
-* **XGBoost** - экстремальный градиентный бустинг
-* **Neural Networks** - нейронные сети
+
 
 ### Метрики оценки
 * **Mean Absolute Error (MAE)**
