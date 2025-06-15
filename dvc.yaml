@@ -1,16 +1,6 @@
 stages:
   train:
-    cmd: python src/train.py
+    cmd: python .\src\lifecycle.py
     deps:
-    - data/processed
-    - src/train.py
-    outs:
-    - models/
-  test:
-    cmd: python src/test.py
-    deps:
-    - models/
-    - src/test.py
-    metrics:
-    - metrics.json:
-        cache: false
+    - .\params.yaml
+    - .\src\lifecycle.py

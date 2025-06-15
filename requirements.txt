@@ -5,3 +5,10 @@ jupyter
 scikit-learn
 matplotlib
 black
+joblib
+catboost
+isort
+dvc
+pyyaml
+dvc_s3
+apache-airflow==2.6.1

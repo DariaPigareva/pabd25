@@ -4,3 +4,6 @@ data
 notebooks/.ipynb_checkpoints
 __pycache__/
 models
+catboost_info
+.aws
+dags/files

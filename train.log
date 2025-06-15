@@ -67,3 +67,40 @@ url_id
 2025-05-19 00:28:14,645 root INFO Коэффициенты: [ 8.60922709e+05  3.26143599e+05 -2.03726813e-10  0.00000000e+00
   0.00000000e+00 -3.03630525e+05 -2.57720682e+06]
 2025-05-19 00:28:14,647 root INFO Test MSE: 15789488101383.05, RMSE: 3973598.89, R2: 0.62
+2025-06-06 19:41:16,011 root INFO Данные предобработаны и сохранены.
+2025-06-06 19:41:16,040 root INFO Модель обучена и сохранена в models\linear_regression_model.pkl
+2025-06-06 19:41:16,040 root INFO Коэффициенты: [   842487.10643806    239087.51225181 -11621749.07653791
+         0.                 0.            569985.39502285
+  -3453358.11008932]
+2025-06-06 19:41:16,050 root INFO Test MSE: 38710495727132.74, RMSE: 6221775.93, R2: 0.86
+2025-06-06 19:54:04,532 root INFO Данные предобработаны и сохранены.
+2025-06-06 19:54:04,539 root INFO Модель обучена и сохранена в models\linear_regression_model.pkl
+2025-06-06 19:54:04,539 root INFO Коэффициенты: [   842487.10643806    239087.51225181 -11621749.07653791
+         0.                 0.            569985.39502285
+  -3453358.11008932]
+2025-06-06 19:54:04,545 root INFO Test MSE: 38710495727132.74, RMSE: 6221775.93, R2: 0.86
+2025-06-15 15:30:50,256 root INFO Preprocess_data. Use files to train: ['./data/raw\\1_2025-02-15_23-34.csv', './data/raw\\1_2025-03-15_23-34.csv', './data/raw\\1_2025-04-15_23-34.csv', './data/raw\\1_2025-05-15_23-34.csv', './data/raw\\1_2025-05-18_23-24.csv', './data/raw\\1_2025-05-18_23-36.csv', './data/raw\\1_2025-05-19_00-00.csv', './data/raw\\1_2025-05-26_17-27.csv', './data/raw\\1_2025-06-02_14-14.csv', './data/raw\\1_2025-06-02_14-15.csv', './data/raw\\1_2025-06-02_14-19.csv']
+2025-06-15 15:30:50,360 root INFO Preprocess_data. train_df: 177 samples
+2025-06-15 15:30:50,375 root INFO 
+           total_meters  floors_count     price  rooms_1  rooms_2  rooms_3  first_floor  last_floor
+url_id                                                                                             
+303300835          36.0            24  11250000     True    False    False        False       False
+303370489          44.9             3   5700000     True    False    False        False        True
+304779000          45.3            31  23900000     True    False    False        False       False
+306658741          35.0            12   9900000     True    False    False        False        True
+306867070          41.1            36  33000000     True    False    False        False       False
+2025-06-15 15:30:50,376 root INFO Preprocess_data. test_df: 45 samples
+2025-06-15 15:30:50,384 root INFO 
+           total_meters  floors_count     price  rooms_1  rooms_2  rooms_3  first_floor  last_floor
+url_id                                                                                             
+317923679          48.1             7   8500000     True    False    False        False       False
+317929604          30.0             4   8700000     True    False    False         True       False
+317943780          32.7             9  10700000     True    False    False        False       False
+317944075          47.0            24  35500000     True    False    False        False       False
+317955245          30.3             9  10700000     True    False    False        False       False
+2025-06-15 15:30:50,408 root INFO Train DecisionTreeRegressor(max_depth=5) and save to models\decision_tree_reg_1.pkl
+2025-06-15 15:30:50,434 root INFO Test model. MSE: 51877552400185.97
+2025-06-15 15:30:50,434 root INFO Test model. RMSE: 7202607.33
+2025-06-15 15:30:50,435 root INFO Test model. MAE: 4301655.02
+2025-06-15 15:30:50,435 root INFO Test model. R2 train: 0.87
+2025-06-15 15:30:50,435 root INFO Test model. R2 test: 0.74
