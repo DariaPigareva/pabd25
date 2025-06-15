@@ -67,13 +67,16 @@ def ProcessFlats():
     )
 
     @task
-    def get_data(n_rooms):
-        data = request_to_cian(n_rooms)
-        # NOTE: configure this as appropriate for your airflow environment
+    def get_all_data():
+        all_data = []
+        for n_rooms in [1, 2, 3]:
+            data = request_to_cian(n_rooms)
+            all_data.append(data)
+        df = pd.concat(all_data)
         root = Path("/opt/airflow/dags/files/")
         root.mkdir(parents=True, exist_ok=True)
         data_path = root / "downloaded_flats.csv"
-        data.to_csv(data_path, index=False)
+        df.to_csv(data_path, index=False)
 
         postgres_hook = PostgresHook(postgres_conn_id="tutorial_pg_conn")
         conn = postgres_hook.get_conn()
@@ -85,12 +88,27 @@ def ProcessFlats():
             )
         conn.commit()
 
+    @task
+    def train_model():
+        import pandas as pd
+        from sklearn.linear_model import LinearRegression
+        import joblib
+        from pathlib import Path
+
+        data_path = Path("/opt/airflow/dags/files/downloaded_flats.csv")
+        df = pd.read_csv(data_path)
+        X = df[["rooms_count", "floor"]]
+        y = df["price"]
+
+        model = LinearRegression()
+        model.fit(X, y)
+        model_path = Path("/opt/airflow/dags/files/flats_model.pkl")
+        joblib.dump(model, model_path)
+
     (
         [create_flat_table]
-        >> get_data(n_rooms=1)
-        >> get_data(n_rooms=2)
-        >> get_data(n_rooms=3)
+        >> get_all_data()
+        >> train_model()
     )
-
 
 dag = ProcessFlats()
